@@ -245,6 +245,22 @@ function closeEMSModal() {
   document.body.style.overflow = "auto";
 }
 
+// Modal functions for Developer Tools screenshots
+function openDevToolsModal() {
+  const modal = document.getElementById("devtoolsModal");
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+
+  // Initialize modal carousel
+  initModalCarousel("devtoolsCarouselTrack", "devtoolsCarouselIndicators");
+}
+
+function closeDevToolsModal() {
+  const modal = document.getElementById("devtoolsModal");
+  modal.classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+
 // Modal carousel functionality
 function initModalCarousel(trackId, indicatorsId) {
   const track = document.getElementById(trackId);
@@ -300,5 +316,6 @@ document.addEventListener("keydown", (e) => {
     closeSnapPOSModal();
     closeFortuneLabModal();
     closeEMSModal();
+    closeDevToolsModal();
   }
 });
