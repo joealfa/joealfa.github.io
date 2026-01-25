@@ -261,6 +261,22 @@ function closeDevToolsModal() {
   document.body.style.overflow = "auto";
 }
 
+// Modal functions for EMS V2 screenshots
+function openEMSV2Modal() {
+  const modal = document.getElementById("emsv2Modal");
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+
+  // Initialize modal carousel
+  initModalCarousel("emsv2CarouselTrack", "emsv2CarouselIndicators");
+}
+
+function closeEMSV2Modal() {
+  const modal = document.getElementById("emsv2Modal");
+  modal.classList.remove("active");
+  document.body.style.overflow = "auto";
+}
+
 // Modal carousel functionality
 function initModalCarousel(trackId, indicatorsId) {
   const track = document.getElementById(trackId);
@@ -317,5 +333,6 @@ document.addEventListener("keydown", (e) => {
     closeFortuneLabModal();
     closeEMSModal();
     closeDevToolsModal();
+    closeEMSV2Modal();
   }
 });

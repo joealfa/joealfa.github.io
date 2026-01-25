@@ -238,6 +238,56 @@
                     </div>
                 </article>
 
+                <!-- Project 5: Employee Management System V2 -->
+                <article class="project-card">
+                    <div class="project-image" style="cursor: pointer;" onclick="openEMSV2Modal()">
+                        <img src="images/emsv2-dashboard-dark.jpg" alt="Employee Management System V2" loading="lazy" />
+                        <div class="project-overlay">
+                            <span class="project-status">In Development</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Employee Management System V2</h3>
+                        <p class="project-description">
+                            A modern cloud-based HR management system built with Clean Architecture. Features 
+                            comprehensive employee management, document storage via Azure Blob Storage, 
+                            JWT authentication, and auto-generated TypeScript API clients. Includes AG Grid 
+                            for advanced data visualization and Chakra-UI for a polished user experience.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">.NET 10</span>
+                            <span class="tech-badge">React 19</span>
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Vite</span>
+                            <span class="tech-badge">Chakra-UI</span>
+                            <span class="tech-badge">AG Grid</span>
+                            <span class="tech-badge">Azure Blob</span>
+                            <span class="tech-badge">EF Core</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" onclick="openEMSV2Modal(); return false;"
+                                aria-label="View EMS V2 screenshots">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                    <circle cx="12" cy="12" r="3"></circle>
+                                </svg>
+                                View Screenshots
+                            </a>
+                            <a href="https://github.com/joealfa/ems-v2" class="project-link" target="_blank"
+                                rel="noopener" aria-label="View EMS V2 source code">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
@@ -370,6 +420,46 @@
                     <button class="indicator" aria-label="View Add Employee"></button>
                     <button class="indicator" aria-label="View Dark Theme Dashboard"></button>
                     <button class="indicator" aria-label="View Upload Documents"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EMS V2 Modal -->
+    <div id="emsv2Modal" class="modal" onclick="closeEMSV2Modal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeEMSV2Modal()">&times;</span>
+            <h2 class="modal-title">Employee Management System V2 Screenshots</h2>
+            <div class="carousel-container">
+                <div class="carousel-wrapper">
+                    <div class="carousel-track" id="emsv2CarouselTrack">
+                        <div class="carousel-slide active">
+                            <img src="images/emsv2-dashboard-dark.jpg" alt="EMS V2 - Dashboard Dark Theme" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/emsv2-dashboard-light.jpg" alt="EMS V2 - Dashboard Light Theme" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/emsv2-persons-add.jpg" alt="EMS V2 - Add Person" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/emsv2-persons-edit.jpg" alt="EMS V2 - Edit Person" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/emsv2-persons-view.jpg" alt="EMS V2 - View Person" />
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="images/emsv2-persons-list.jpg" alt="EMS V2 - Persons List" />
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-indicators" id="emsv2CarouselIndicators">
+                    <button class="indicator active" aria-label="View Dashboard Dark"></button>
+                    <button class="indicator" aria-label="View Dashboard Light"></button>
+                    <button class="indicator" aria-label="View Add Person"></button>
+                    <button class="indicator" aria-label="View Edit Person"></button>
+                    <button class="indicator" aria-label="View Person Details"></button>
+                    <button class="indicator" aria-label="View Persons List"></button>
                 </div>
             </div>
         </div>
