@@ -288,6 +288,68 @@
                     </div>
                 </article>
 
+
+                <!-- Project 6: MCP Server Interactive -->
+                <article class="project-card">
+                    <div class="project-image" style="cursor: pointer;" onclick="openMCPModal()">
+                        <video autoplay muted loop playsinline
+                            style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                            <source src="https://raw.githubusercontent.com/joealfa/blog/main/assets/videos/mcp-server-interactive.mp4" type="video/mp4" />
+                        </video>
+                        <div class="project-overlay">
+                            <span class="project-status">Published</span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">MCP Interactive Server</h3>
+                        <p class="project-description">
+                            A Python MCP server that renders fully interactive HTML applications directly inside
+                            AI chat hosts like VS Code GitHub Copilot Chat and Claude Desktop. Features live UI
+                            panels including Poll/Survey, Quiz/Trivia, Kanban Board, and System Monitor —
+                            all without leaving the conversation.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-badge">Python</span>
+                            <span class="tech-badge">FastMCP</span>
+                            <span class="tech-badge">FastAPI</span>
+                            <span class="tech-badge">TypeScript</span>
+                            <span class="tech-badge">Vite</span>
+                            <span class="tech-badge">MCP SDK</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" onclick="openMCPModal(); return false;"
+                                aria-label="Watch MCP Interactive Server demo">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                </svg>
+                                Watch Demo
+                            </a>
+                            <a href="https://joealfa.github.io/blog/2026/03/06/mcp-server/" class="project-link"
+                                target="_blank" rel="noopener" aria-label="Read MCP Server blog post">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                Blog Post
+                            </a>
+                            <a href="https://github.com/joealfa/mcp-server-interactive" class="project-link"
+                                target="_blank" rel="noopener" aria-label="View MCP Server source code">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                GitHub
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
             </div>
         </div>
     </section>
@@ -461,6 +523,20 @@
                     <button class="indicator" aria-label="View Person Details"></button>
                     <button class="indicator" aria-label="View Persons List"></button>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MCP Server Modal -->
+    <div id="mcpModal" class="modal" onclick="closeMCPModal()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="modal-close" onclick="closeMCPModal()">&times;</span>
+            <h2 class="modal-title">MCP Interactive Server — Demo</h2>
+            <div style="width: 100%; background: #000; border-radius: 8px; overflow: hidden;">
+                <video id="mcpVideo" controls style="width: 100%; display: block; max-height: 70vh;">
+                    <source src="https://raw.githubusercontent.com/joealfa/blog/main/assets/videos/mcp-server-interactive.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
             </div>
         </div>
     </div>

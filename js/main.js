@@ -326,6 +326,21 @@ function initModalCarousel(trackId, indicatorsId) {
   updateCarousel();
 }
 
+// Modal functions for MCP Server demo
+function openMCPModal() {
+  const modal = document.getElementById("mcpModal");
+  modal.classList.add("active");
+  document.body.style.overflow = "hidden";
+}
+
+function closeMCPModal() {
+  const modal = document.getElementById("mcpModal");
+  modal.classList.remove("active");
+  document.body.style.overflow = "auto";
+  const video = document.getElementById("mcpVideo");
+  if (video) video.pause();
+}
+
 // Close modal on Escape key
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") {
@@ -334,5 +349,6 @@ document.addEventListener("keydown", (e) => {
     closeEMSModal();
     closeDevToolsModal();
     closeEMSV2Modal();
+    closeMCPModal();
   }
 });
